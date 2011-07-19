@@ -1,0 +1,27 @@
+$Id: README 1792 2009-11-04 15:28:25Z jbuchbinder $
+
+DEPLOYMENT NOTES
+
+1) GWT 2.0+ must be installed in /opt/gwt/ for this to properly compile
+   the WAR for the application.
+
+2) Files need to be deployed into a tomcat container:
+   wrapper.sh -> TOMCAT_HOME/wrapper.sh
+   salesdisplay.properties -> TOMCAT_HOME/salesdisplay.properties
+   SalesDisplay.war -> TOMCAT_HOME/webapps/SalesDisplay.war
+
+3) Database properties are managed in salesdisplay.properties, and that
+   file is passed to tomcat (or another J2EE container) by passing
+     -Dproperties=${TOMCAT_HOME}/salesdisplay.properties
+   ... also make sure to adjust the credentials for Salesforce in there,
+   otherwise the graph won't load. If there are still issues. make sure
+   to login to salesforce using lynx from the server and "authorize" the
+   current machine to use the salesforce website on that account.
+
+4) If Jetty is being used, change this in etc/jetty.xml:
+   <New id="DefaultHandler" class="org.mortbay.jetty.handler.DefaultHandler"/>
+      to:
+   <New id="DefaultHandler" class="org.mortbay.jetty.handler.DefaultHandler">
+     <Set name="serveIcon">false</Set>
+   </New>
+

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	$Id: web.xml 1566 2009-05-18 19:57:45Z jbuchbinder $
+ -->
+<web-app>
+	<servlet>
+		<servlet-name>Log4JInitServlet</servlet-name>
+		<servlet-class>com.github.freemed.gwt.server.LoggerServlet</servlet-class>
+		<init-param>
+			<param-name>log4j-properties</param-name>
+			<param-value>WEB-INF/log4j.properties</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>service</servlet-name>
+		<servlet-class>com.github.freemed.gwt.server.ServiceImpl</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>service</servlet-name>
+		<url-pattern>/service</url-pattern>
+	</servlet-mapping>
+
+	<!-- Mapping for Salesforce Graph servlet -->
+
+	<servlet>
+		<servlet-name>SalesforceGraphServlet</servlet-name>
+		<servlet-class>com.github.freemed.gwt.server.SalesforceGraphServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SalesforceGraphServlet</servlet-name>
+		<url-pattern>/SalesforceGraph</url-pattern>
+	</servlet-mapping>
+
+<!-- Uncomment below for development only -->
+<!--
+	<servlet>
+		<servlet-name>shell</servlet-name>
+		<servlet-class>com.google.gwt.dev.shell.GWTShellServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>shell</servlet-name>
+		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+-->
+
+</web-app>

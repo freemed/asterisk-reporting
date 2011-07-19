@@ -1,0 +1,5 @@
+#Wed Apr 29 10:36:40 EDT 2009
+war.name=SalesDisplay.war
+compiler.style=OBFUSCATED
+server.path=
+compiler.memory.max=64m

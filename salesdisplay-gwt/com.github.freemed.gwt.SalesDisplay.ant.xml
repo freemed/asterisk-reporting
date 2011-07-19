@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="com.github.freemed.gwt.SalesDisplay" default="compile" basedir=".">
+  <description>
+    com.github.freemed.gwt.SalesDisplay build file.  This is used to package up your project as a jar,
+    if you want to distribute it.  This isn't needed for normal operation.
+  </description>
+
+  <!-- set classpath -->
+  <path id="project.class.path">
+    <pathelement path="${java.class.path}/"/>
+    <pathelement path="/opt/gwt/gwt-user.jar"/>
+    <pathelement path="lib/gchart-2.41.jar" />
+    <pathelement path="lib/log4j-1.2.15.jar" />
+    <pathelement path="lib/commons-collections-3.2.1.jar" />
+    <pathelement path="lib/commons-configuration-1.6.jar" />
+    <pathelement path="lib/commons-lang-2.4.jar" />
+    <pathelement path="lib/mysql-connector-java-5.1.7-bin.jar" />
+
+    <pathelement path="lib/commons-codec-1.3.jar" />
+    <pathelement path="lib/commons-httpclient-3.1.jar" />
+    <pathelement path="lib/commons-io-1.4.jar" />
+    <pathelement path="lib/commons-logging-1.1.1.jar" />
+    <pathelement path="lib/cssparser-0.9.5.jar" />
+    <pathelement path="lib/htmlunit-2.5.jar" />
+    <pathelement path="lib/htmlunit-core-js-2.5.jar" />
+    <pathelement path="lib/junit-3.8.2.jar" />
+    <pathelement path="lib/nekohtml-1.9.12.jar" />
+    <pathelement path="lib/sac-1.3.jar" />
+    <pathelement path="lib/serializer-2.7.1.jar" />
+    <pathelement path="lib/xalan-2.7.1.jar" />
+    <pathelement path="lib/xercesImpl-2.8.1.jar" />
+    <pathelement path="lib/xml-apis-1.3.04.jar" />
+
+    <!-- Additional dependencies (such as junit) go here -->
+  </path>
+
+  <target name="compile" description="Compile src to bin">
+    <mkdir dir="bin"/>
+    <javac srcdir="src:test" destdir="bin" includes="**" debug="on" debuglevel="lines,vars,source" source="1.5">
+      <classpath refid="project.class.path"/>
+    </javac>
+  </target>
+
+  <target name="package" depends="compile" description="Package up the project as a jar">
+    <jar destfile="com.github.freemed.gwt.SalesDisplay.jar">
+      <fileset dir="bin">
+        <include name="**/*.class"/>
+      </fileset>
+      <!-- Get everything; source, modules, html files -->
+      <fileset dir="src">
+        <include name="**"/>
+      </fileset>
+      <fileset dir="test">
+        <include name="**"/>
+      </fileset>
+    </jar>
+  </target>
+
+  <target name="clean">
+    <!-- Delete the bin directory tree -->
+    <delete file="com.github.freemed.gwt.SalesDisplay.jar"/>
+    <delete>
+      <fileset dir="bin" includes="**/*.class"/>
+    </delete>
+  </target>
+
+  <target name="all" depends="package"/>
+
+</project>

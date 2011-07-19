@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="var" path="JUNIT_HOME/junit.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-codec-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-configuration-1.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-httpclient-3.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-io-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-lang-2.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/cssparser-0.9.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/gwt-servlet.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/htmlunit-2.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/htmlunit-core-js-2.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/junit-3.8.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/log4j-1.2.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/nekohtml-1.9.12.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/sac-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/serializer-2.7.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/xalan-2.7.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/xercesImpl-2.8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/xml-apis-1.3.04.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/servlet-api-2.5-20081211.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/gwt-fx-4.0.0.jar"/>
+	<classpathentry kind="lib" path="war/WEB-INF/lib/mysql-connector-java-5.1.10-bin.jar"/>
+	<classpathentry kind="lib" path="lib/gchart-2.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

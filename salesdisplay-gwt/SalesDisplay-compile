@@ -1,0 +1,8 @@
+#!/bin/sh
+APPDIR=`dirname $0`;
+CP="$APPDIR/src:$APPDIR/bin:/opt/gwt/gwt-user.jar:/opt/gwt/gwt-dev-linux.jar:/usr/lib/gwt/gwt-user.jar:/usr/lib/gwt/gwt-dev-linux.jar"
+for JAR in lib/*.jar war/WEB-INF/lib/*.jar; do
+	CP="${CP}:$APPDIR/lib/$(basename "$JAR")"
+done
+echo "Compiling GWT portion of application ... "
+java -Xmx1G -Xss1024k -Xms512M -cp "$CP" com.google.gwt.dev.Compiler -war "$APPDIR/war" "$@" com.github.freemed.gwt.SalesDisplay;

@@ -1,0 +1,13 @@
+<module rename-to="SalesDisplay">
+	<inherits name="com.google.gwt.user.User" />
+	<inherits name="com.googlecode.gchart.GChart" />
+	<inherits name="com.google.gwt.http.HTTP" />
+	<inherits name="com.google.gwt.json.JSON" />
+	<inherits name="com.google.gwt.xml.XML" />
+	<inherits name="org.adamtacy.GWTEffects" />
+
+	<inherits name='com.google.gwt.user.theme.standard.Standard' />
+	<entry-point class='com.github.freemed.gwt.client.SalesDisplay' />
+	<stylesheet src='SalesDisplay.css' />
+
+</module>

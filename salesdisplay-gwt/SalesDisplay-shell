@@ -1,0 +1,7 @@
+#!/bin/sh
+APPDIR=`dirname $0`;
+CP="$APPDIR/src:$APPDIR/bin:/opt/gwt/gwt-user.jar:/opt/gwt/gwt-dev-linux.jar:/usr/lib/gwt/gwt-user.jar:/usr/lib/gwt/gwt-dev-linux.jar"
+for JAR in war/WEB-INF/lib/*.jar; do
+	CP="${CP}:$APPDIR/lib/$(basename "$JAR")"
+done
+java  -Xmx256M -cp "$CP" com.google.gwt.dev.HostedMode -out "$APPDIR/war" "$@" com.github.freemed.gwt.SalesDisplay/SalesDisplay.html;
